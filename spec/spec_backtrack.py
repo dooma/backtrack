@@ -48,5 +48,12 @@ class TestBacktrack(unittest.TestCase):
 
     def test_determine(self):
         backtrack = Backtrack([1, 1, 2, 3, 4, 5])
-
         backtrack.determine()
+
+        self.assertEqual(len(backtrack.result), 28)
+
+    def test_determine_inline(self):
+        backtrack = Backtrack([1, 1, 2, 3, 4, 5])
+        backtrack.determine_inline()
+
+        self.assertEqual(len(backtrack.result), 28)
